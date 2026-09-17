@@ -1,0 +1,2056 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kor'Art Éditions — Maison d'édition à Lomé</title>
+<meta name="description" content="Kor'Art Éditions accompagne les auteurs dans la publication de leurs livres à Lomé, au Togo.">
+
+<link rel="icon" href="data:,">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --green:#173F35;
+  --green-dark:#0D2923;
+  --green-soft:#245448;
+
+  --gold:#C68A3A;
+  --gold-light:#E2B56D;
+
+  --cream:#F8F3E9;
+  --cream-dark:#EFE5D3;
+  --white:#FFFDF9;
+
+  --brown:#5D4631;
+  --text:#25231F;
+  --muted:#6D685F;
+
+  --line:#DCCDB5;
+
+  --radius:18px;
+  --shadow:0 18px 50px rgba(28,31,25,.08);
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--text);
+  font-family:'DM Sans',sans-serif;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+a{
+  color:inherit;
+}
+
+button{
+  font:inherit;
+}
+
+.container{
+  width:min(1160px, calc(100% - 48px));
+  margin:auto;
+}
+
+
+/* =========================================================
+   TYPOGRAPHIE
+========================================================= */
+
+h1,
+h2,
+h3{
+  font-family:'Playfair Display',serif;
+  font-weight:500;
+  margin:0;
+  color:var(--green-dark);
+}
+
+h1{
+  font-size:clamp(3rem,6vw,5.7rem);
+  line-height:1.02;
+  letter-spacing:-.045em;
+}
+
+h2{
+  font-size:clamp(2.2rem,4vw,3.5rem);
+  line-height:1.08;
+  letter-spacing:-.025em;
+}
+
+h3{
+  font-size:1.45rem;
+  line-height:1.2;
+}
+
+p{
+  margin:0;
+}
+
+.eyebrow{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:18px;
+
+  color:var(--gold);
+  font-size:.76rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+}
+
+.eyebrow::before{
+  content:"";
+  width:32px;
+  height:1px;
+  background:var(--gold);
+}
+
+.section-intro{
+  max-width:690px;
+  margin-top:22px;
+
+  color:var(--muted);
+  font-size:1.08rem;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+
+  background:rgba(248,243,233,.94);
+  backdrop-filter:blur(14px);
+
+  border-bottom:1px solid rgba(220,205,181,.8);
+}
+
+.nav{
+  min-height:82px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+}
+
+/*
+  LOGO
+  ---------------------------------------------------------
+  Aucun faux logo n'est créé ici.
+  Quand le vrai logo Kor'Art sera disponible, remplacer
+  le bloc .brand-text par :
+
+  <img src="images/logo-korart.png" alt="Kor'Art Éditions">
+*/
+
+.brand{
+  text-decoration:none;
+  display:flex;
+  align-items:center;
+}
+
+.brand-text{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:1.45rem;
+  color:var(--green-dark);
+  letter-spacing:-.02em;
+}
+
+.navlinks{
+  display:flex;
+  align-items:center;
+  gap:30px;
+
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+.navlinks a{
+  text-decoration:none;
+  color:var(--brown);
+  font-size:.9rem;
+  font-weight:500;
+
+  transition:color .2s ease;
+}
+
+.navlinks a:hover{
+  color:var(--gold);
+}
+
+.nav-cta{
+  padding:11px 17px;
+
+  border:1px solid var(--green);
+  border-radius:999px;
+
+  color:var(--green) !important;
+}
+
+.nav-cta:hover{
+  background:var(--green);
+  color:white !important;
+}
+
+.navtoggle{
+  display:none;
+
+  width:44px;
+  height:44px;
+
+  border:1px solid var(--line);
+  border-radius:50%;
+
+  background:transparent;
+  color:var(--green);
+
+  cursor:pointer;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+  position:relative;
+  overflow:hidden;
+
+  padding:105px 0 110px;
+
+  background:
+    radial-gradient(circle at 88% 20%, rgba(198,138,58,.16), transparent 28%),
+    linear-gradient(135deg,var(--cream) 0%,#F5ECDD 100%);
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.08fr .92fr;
+  align-items:center;
+  gap:80px;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+}
+
+.hero h1 span{
+  color:var(--gold);
+  font-style:italic;
+}
+
+.hero-text{
+  max-width:620px;
+  margin-top:30px;
+
+  color:var(--muted);
+  font-size:1.15rem;
+}
+
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+
+  margin-top:34px;
+}
+
+.button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  min-height:48px;
+  padding:0 22px;
+
+  border-radius:999px;
+
+  text-decoration:none;
+  font-size:.9rem;
+  font-weight:600;
+
+  transition:
+    transform .2s ease,
+    background .2s ease,
+    border-color .2s ease;
+}
+
+.button:hover{
+  transform:translateY(-2px);
+}
+
+.button-primary{
+  background:var(--green);
+  color:white;
+}
+
+.button-primary:hover{
+  background:var(--green-dark);
+}
+
+.button-secondary{
+  border:1px solid var(--line);
+  background:rgba(255,253,249,.6);
+  color:var(--green);
+}
+
+
+/* HERO ART */
+
+.hero-art{
+  min-height:500px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  position:relative;
+}
+
+.book-stage{
+  width:310px;
+  height:410px;
+
+  position:relative;
+
+  transform:rotate(5deg);
+
+  background:
+    linear-gradient(145deg,
+      var(--green) 0%,
+      var(--green-dark) 70%);
+
+  border-radius:5px 13px 13px 5px;
+
+  box-shadow:
+    25px 25px 0 rgba(198,138,58,.72),
+    40px 40px 0 rgba(36,84,72,.17),
+    0 35px 65px rgba(21,39,31,.20);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  overflow:hidden;
+}
+
+.book-stage::before{
+  content:"";
+
+  position:absolute;
+  inset:20px;
+
+  border:1px solid rgba(255,255,255,.28);
+}
+
+.book-stage::after{
+  content:"";
+
+  position:absolute;
+
+  width:180px;
+  height:180px;
+
+  border-radius:50%;
+
+  border:1px solid rgba(226,181,109,.35);
+
+  right:-75px;
+  bottom:-65px;
+}
+
+.book-stage-content{
+  position:relative;
+  z-index:2;
+
+  padding:35px;
+
+  text-align:center;
+  color:white;
+}
+
+.book-stage-small{
+  margin-bottom:20px;
+
+  font-size:.7rem;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+
+  color:var(--gold-light);
+}
+
+.book-stage-title{
+  font-family:'Playfair Display',serif;
+  font-size:2.2rem;
+  line-height:1.08;
+}
+
+.book-stage-footer{
+  margin-top:35px;
+
+  font-size:.72rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+
+  color:rgba(255,255,255,.72);
+}
+
+.hero-location{
+  margin-top:26px;
+
+  color:var(--green);
+  font-size:.88rem;
+  font-weight:600;
+}
+
+
+/* =========================================================
+   INTRO / MAISON
+========================================================= */
+
+.section{
+  padding:105px 0;
+}
+
+.section-light{
+  background:var(--white);
+}
+
+.section-green{
+  background:var(--green);
+  color:white;
+}
+
+.section-green h2{
+  color:white;
+}
+
+.section-green .section-intro{
+  color:rgba(255,255,255,.73);
+}
+
+.house-grid{
+  display:grid;
+  grid-template-columns:.75fr 1.25fr;
+  gap:90px;
+  align-items:start;
+}
+
+.house-text{
+  color:var(--muted);
+  font-size:1.06rem;
+}
+
+.house-text p + p{
+  margin-top:20px;
+}
+
+.house-values{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+}
+
+.value-card{
+  padding:27px;
+
+  background:var(--cream);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+}
+
+.value-number{
+  margin-bottom:30px;
+
+  font-family:'Playfair Display',serif;
+  color:var(--gold);
+  font-size:1.1rem;
+}
+
+.value-card h3{
+  margin-bottom:10px;
+  font-size:1.25rem;
+}
+
+.value-card p{
+  color:var(--muted);
+  font-size:.91rem;
+}
+
+
+/* =========================================================
+   COLLECTIONS
+========================================================= */
+
+.collections{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px;
+
+  margin-top:52px;
+}
+
+.collection-card{
+  position:relative;
+  overflow:hidden;
+
+  min-height:330px;
+  padding:34px;
+
+  border-radius:var(--radius);
+
+  background:var(--white);
+  border:1px solid var(--line);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+.collection-card:hover{
+  transform:translateY(-5px);
+  box-shadow:var(--shadow);
+}
+
+.collection-card::after{
+  content:"";
+
+  position:absolute;
+
+  width:190px;
+  height:190px;
+
+  right:-75px;
+  bottom:-85px;
+
+  border-radius:50%;
+
+  border:1px solid rgba(198,138,58,.2);
+}
+
+.collection-index{
+  color:var(--gold);
+  font-size:.75rem;
+  font-weight:700;
+  letter-spacing:.15em;
+}
+
+.collection-name{
+  margin-top:55px;
+  font-size:2.05rem;
+}
+
+.collection-description{
+  max-width:470px;
+  margin-top:15px;
+
+  color:var(--muted);
+  font-size:.95rem;
+}
+
+.collection-tag{
+  display:inline-block;
+
+  margin-top:25px;
+  padding:7px 11px;
+
+  border-radius:999px;
+
+  background:var(--cream-dark);
+
+  color:var(--green);
+  font-size:.7rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+
+.collection-colibri{
+  background:
+    linear-gradient(135deg,#FFFDF9,#F7E5DF);
+}
+
+.collection-palme{
+  background:
+    linear-gradient(135deg,#FFFDF9,#F1E5D1);
+}
+
+.collection-sophia{
+  background:
+    linear-gradient(135deg,#FFFDF9,#E7EAE0);
+}
+
+.collection-osiris{
+  background:
+    linear-gradient(135deg,#FFFDF9,#E4E7EA);
+}
+
+.collection-nunya{
+  grid-column:1 / -1;
+
+  background:
+    linear-gradient(135deg,#FFFDF9,#E4E7D9);
+}
+
+
+/* =========================================================
+   PUBLICATION
+========================================================= */
+
+.publication{
+  display:grid;
+  grid-template-columns:350px 1fr;
+  gap:75px;
+  align-items:center;
+
+  margin-top:50px;
+}
+
+.publication-cover{
+  min-height:460px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:4px;
+
+  background:
+    linear-gradient(145deg,#573E2B,#1B322B);
+
+  box-shadow:
+    18px 20px 0 rgba(198,138,58,.45),
+    0 30px 60px rgba(20,30,25,.16);
+}
+
+.publication-cover-inner{
+  width:78%;
+  height:82%;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+
+  padding:28px;
+
+  border:1px solid rgba(255,255,255,.3);
+
+  color:white;
+  text-align:center;
+}
+
+.publication-cover-label{
+  font-size:.65rem;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  color:var(--gold-light);
+}
+
+.publication-cover-title{
+  font-family:'Playfair Display',serif;
+  font-size:2rem;
+  line-height:1.1;
+}
+
+.publication-cover-author{
+  font-size:.7rem;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  color:rgba(255,255,255,.72);
+}
+
+.publication-info h3{
+  font-size:2.3rem;
+}
+
+.publication-meta{
+  margin-top:13px;
+
+  color:var(--gold);
+  font-size:.82rem;
+  font-weight:700;
+}
+
+.publication-text{
+  max-width:600px;
+  margin-top:22px;
+
+  color:var(--muted);
+}
+
+
+/* =========================================================
+   PUBLICATION / ACCOMPAGNEMENT
+========================================================= */
+
+.process-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1px;
+
+  margin-top:55px;
+
+  background:var(--line);
+  border:1px solid var(--line);
+}
+
+.process-card{
+  min-height:245px;
+  padding:30px;
+
+  background:var(--white);
+}
+
+.process-number{
+  font-family:'Playfair Display',serif;
+  color:var(--gold);
+  font-size:1.15rem;
+}
+
+.process-card h3{
+  margin-top:48px;
+  font-size:1.25rem;
+}
+
+.process-card p{
+  margin-top:12px;
+
+  color:var(--muted);
+  font-size:.9rem;
+}
+
+.payment-note{
+  margin-top:32px;
+  padding:24px 28px;
+
+  border-left:3px solid var(--gold);
+
+  background:var(--cream);
+
+  color:var(--brown);
+  font-size:.94rem;
+}
+
+
+/* =========================================================
+   APPEL AUX AUTEURS
+========================================================= */
+
+.author-section{
+  position:relative;
+  overflow:hidden;
+}
+
+.author-layout{
+  display:grid;
+  grid-template-columns:1fr .8fr;
+  gap:80px;
+  align-items:center;
+}
+
+.author-copy h2{
+  max-width:650px;
+}
+
+.author-copy p{
+  max-width:650px;
+  margin-top:22px;
+
+  color:rgba(255,255,255,.72);
+}
+
+.author-card{
+  padding:38px;
+
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:var(--radius);
+
+  background:rgba(255,255,255,.06);
+}
+
+.author-card-title{
+  color:var(--gold-light);
+
+  font-size:.72rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.15em;
+}
+
+.author-card h3{
+  margin-top:18px;
+
+  color:white;
+  font-size:2rem;
+}
+
+.author-card p{
+  margin-top:14px;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:90px;
+}
+
+.contact-details{
+  display:grid;
+  gap:25px;
+  margin-top:38px;
+}
+
+.contact-item{
+  padding-bottom:20px;
+
+  border-bottom:1px solid var(--line);
+}
+
+.contact-label{
+  margin-bottom:5px;
+
+  color:var(--gold);
+  font-size:.72rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+}
+
+.contact-value{
+  color:var(--green);
+  font-size:1rem;
+}
+
+.contact-value a{
+  text-decoration:none;
+}
+
+.contact-form{
+  padding:38px;
+
+  background:var(--cream);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+}
+
+.form-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+
+.field{
+  margin-bottom:18px;
+}
+
+.field label{
+  display:block;
+
+  margin-bottom:7px;
+
+  color:var(--brown);
+  font-size:.78rem;
+  font-weight:600;
+}
+
+.field input,
+.field textarea,
+.field select{
+  width:100%;
+
+  padding:13px 15px;
+
+  border:1px solid var(--line);
+  border-radius:10px;
+
+  outline:none;
+
+  background:var(--white);
+
+  color:var(--text);
+
+  font:inherit;
+}
+
+.field textarea{
+  min-height:135px;
+  resize:vertical;
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus{
+  border-color:var(--gold);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+  padding:35px 0;
+
+  background:var(--green-dark);
+
+  color:rgba(255,255,255,.62);
+
+  font-size:.8rem;
+}
+
+.footer-grid{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:25px;
+}
+
+.footer-brand{
+  color:white;
+
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:1.15rem;
+}
+
+.footer-address{
+  text-align:right;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:900px){
+
+  .hero-grid,
+  .house-grid,
+  .publication,
+  .author-layout,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero-grid{
+    gap:50px;
+  }
+
+  .hero-art{
+    min-height:400px;
+  }
+
+  .house-grid{
+    gap:45px;
+  }
+
+  .publication{
+    gap:50px;
+  }
+
+  .publication-cover{
+    width:min(350px,100%);
+  }
+
+  .process-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .author-layout{
+    gap:45px;
+  }
+
+  .contact-grid{
+    gap:50px;
+  }
+}
+
+
+@media(max-width:720px){
+
+  .container{
+    width:min(100% - 32px,1160px);
+  }
+
+  .nav{
+    min-height:72px;
+  }
+
+  .navtoggle{
+    display:block;
+  }
+
+  .navlinks{
+    position:absolute;
+
+    left:16px;
+    right:16px;
+    top:calc(100% + 8px);
+
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+
+    max-height:0;
+    overflow:hidden;
+
+    background:var(--white);
+
+    border:1px solid var(--line);
+    border-radius:15px;
+
+    box-shadow:var(--shadow);
+
+    transition:max-height .25s ease;
+  }
+
+  .navlinks.open{
+    max-height:400px;
+  }
+
+  .navlinks li{
+    border-bottom:1px solid var(--line);
+  }
+
+  .navlinks li:last-child{
+    border-bottom:0;
+  }
+
+  .navlinks a{
+    display:block;
+    padding:15px 18px;
+  }
+
+  .nav-cta{
+    margin:10px 15px 15px;
+    text-align:center;
+  }
+
+  .hero{
+    padding:75px 0 80px;
+  }
+
+  .hero-art{
+    min-height:340px;
+  }
+
+  .book-stage{
+    width:225px;
+    height:305px;
+
+    box-shadow:
+      16px 16px 0 rgba(198,138,58,.65),
+      27px 27px 0 rgba(36,84,72,.15),
+      0 25px 45px rgba(21,39,31,.18);
+  }
+
+  .book-stage-title{
+    font-size:1.65rem;
+  }
+
+  .section{
+    padding:75px 0;
+  }
+
+  .collections{
+    grid-template-columns:1fr;
+  }
+
+  .collection-nunya{
+    grid-column:auto;
+  }
+
+  .collection-card{
+    min-height:285px;
+  }
+
+  .house-values{
+    grid-template-columns:1fr;
+  }
+
+  .process-grid{
+    grid-template-columns:1fr;
+  }
+
+  .process-card{
+    min-height:auto;
+  }
+
+  .form-row{
+    grid-template-columns:1fr;
+  }
+
+  .contact-form{
+    padding:25px;
+  }
+
+  .footer-grid{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .footer-address{
+    text-align:left;
+  }
+}
+
+
+@media(max-width:430px){
+
+  h1{
+    font-size:2.8rem;
+  }
+
+  .hero-actions{
+    flex-direction:column;
+  }
+
+  .button{
+    width:100%;
+  }
+
+  .publication-cover{
+    min-height:390px;
+  }
+}
+</style>
+</head>
+
+
+<body>
+
+<!-- =======================================================
+     HEADER
+======================================================= -->
+
+<header>
+
+  <nav class="container nav">
+
+    <!--
+      IMPORTANT :
+      Ce bloc n'est PAS le logo officiel.
+      Il sert uniquement de texte temporaire.
+      Remplacer par le véritable logo Kor'Art lorsque
+      son fichier sera disponible.
+    -->
+    <a href="#top" class="brand">
+      <span class="brand-text">Kor'Art Éditions</span>
+    </a>
+
+    <button
+      class="navtoggle"
+      id="navtoggle"
+      aria-label="Ouvrir le menu"
+      aria-expanded="false">
+      ☰
+    </button>
+
+    <ul class="navlinks" id="navlinks">
+
+      <li>
+        <a href="#maison">La maison</a>
+      </li>
+
+      <li>
+        <a href="#collections">Collections</a>
+      </li>
+
+      <li>
+        <a href="#publications">Publications</a>
+      </li>
+
+      <li>
+        <a href="#publier">Publier</a>
+      </li>
+
+      <li>
+        <a href="#contact" class="nav-cta">Nous contacter</a>
+      </li>
+
+    </ul>
+
+  </nav>
+
+</header>
+
+
+<main id="top">
+
+
+<!-- =======================================================
+     HERO
+======================================================= -->
+
+<section class="hero">
+
+  <div class="container hero-grid">
+
+    <div class="hero-content">
+
+      <p class="eyebrow">Maison d'édition · Lomé · Togo</p>
+
+      <h1>
+        Vos textes ont une histoire.<br>
+        <span>Nous leur donnons une place.</span>
+      </h1>
+
+      <p class="hero-text">
+        Kor'Art Éditions accompagne les auteurs dans leur projet de publication
+        et contribue à faire vivre des textes qui méritent de rencontrer leurs lecteurs.
+      </p>
+
+      <div class="hero-actions">
+
+        <a href="#publier" class="button button-primary">
+          Publier avec Kor'Art
+        </a>
+
+        <a href="#collections" class="button button-secondary">
+          Découvrir nos collections
+        </a>
+
+      </div>
+
+      <p class="hero-location">
+        Lomé, Djidjolé · derrière Pharmacie de Djidjolé
+      </p>
+
+    </div>
+
+
+    <!--
+      Visuel éditorial abstrait.
+      Ce n'est PAS un logo et ne prétend pas représenter
+      une couverture réelle.
+    -->
+
+    <div class="hero-art">
+
+      <div class="book-stage">
+
+        <div class="book-stage-content">
+
+          <div class="book-stage-small">
+            Éditions Kor'Art
+          </div>
+
+          <div class="book-stage-title">
+            Des histoires,<br>
+            des idées,<br>
+            des voix.
+          </div>
+
+          <div class="book-stage-footer">
+            Lomé · Togo
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     LA MAISON
+======================================================= -->
+
+<section id="maison" class="section section-light">
+
+  <div class="container house-grid">
+
+    <div>
+
+      <p class="eyebrow">La maison</p>
+
+      <h2>
+        Une maison ouverte aux voix et aux idées.
+      </h2>
+
+    </div>
+
+
+    <div class="house-text">
+
+      <p>
+        Kor'Art Éditions est une maison d'édition basée à Lomé, au Togo,
+        qui accompagne les auteurs dans la réalisation de leurs projets
+        éditoriaux.
+      </p>
+
+      <p>
+        À travers ses différentes collections, la maison accueille des
+        textes aux univers variés, allant des récits et histoires d'amour
+        aux ouvrages de développement personnel, aux œuvres consacrées
+        au sacré, aux livres de formation et aux créations fondées sur
+        l'image.
+      </p>
+
+      <p>
+        Notre accompagnement permet aux auteurs de donner une forme
+        éditoriale à leur projet et de cheminer vers sa publication.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="container">
+
+    <div class="house-values">
+
+      <article class="value-card">
+
+        <div class="value-number">01</div>
+
+        <h3>Accompagnement</h3>
+
+        <p>
+          Un suivi éditorial adapté au projet et au parcours de chaque auteur.
+        </p>
+
+      </article>
+
+
+      <article class="value-card">
+
+        <div class="value-number">02</div>
+
+        <h3>Diversité éditoriale</h3>
+
+        <p>
+          Des collections pensées pour accueillir des genres et des
+          univers différents.
+        </p>
+
+      </article>
+
+
+      <article class="value-card">
+
+        <div class="value-number">03</div>
+
+        <h3>Accessibilité</h3>
+
+        <p>
+          Des possibilités de paiement par tranches pour permettre aux
+          auteurs d'avancer dans leur projet.
+        </p>
+
+      </article>
+
+
+      <article class="value-card">
+
+        <div class="value-number">04</div>
+
+        <h3>Présence locale</h3>
+
+        <p>
+          Une maison implantée à Lomé et tournée vers les auteurs
+          et les lecteurs du Togo et d'ailleurs.
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     COLLECTIONS
+======================================================= -->
+
+<section id="collections" class="section">
+
+  <div class="container">
+
+    <p class="eyebrow">Notre ligne éditoriale</p>
+
+    <h2>
+      Cinq collections,<br>
+      cinq univers éditoriaux.
+    </h2>
+
+    <p class="section-intro">
+      Chaque collection possède son propre territoire et accueille
+      des projets correspondant à une ligne éditoriale précise.
+    </p>
+
+
+    <div class="collections">
+
+
+      <!-- COLIBRI -->
+
+      <article class="collection-card collection-colibri">
+
+        <div class="collection-index">01 · COLLECTION</div>
+
+        <h3 class="collection-name">
+          Colibri
+        </h3>
+
+        <p class="collection-description">
+          Programme éditorial destiné à révéler et accompagner les jeunes
+          auteurs à travers la publication de courts récits, mini-récits,
+          romans, nouvelles et chroniques portant principalement sur
+          l'amour, les rencontres, les ruptures, les souvenirs, les
+          émotions et les expériences de la vie.
+        </p>
+
+        <span class="collection-tag">
+          Histoires · Amour · Récits
+        </span>
+
+      </article>
+
+
+      <!-- PALME D'OR -->
+
+      <article class="collection-card collection-palme">
+
+        <div class="collection-index">02 · COLLECTION</div>
+
+        <h3 class="collection-name">
+          Palme d'Or
+        </h3>
+
+        <p class="collection-description">
+          Collection consacrée au développement personnel, à
+          l'entrepreneuriat, aux ouvrages pratiques et techniques,
+          aux livres spécialisés dans un domaine précis ainsi qu'aux essais.
+        </p>
+
+        <span class="collection-tag">
+          Développement · Pratique · Expertise
+        </span>
+
+      </article>
+
+
+      <!-- SOPHIA -->
+
+      <article class="collection-card collection-sophia">
+
+        <div class="collection-index">03 · COLLECTION</div>
+
+        <h3 class="collection-name">
+          Sophia
+        </h3>
+
+        <p class="collection-description">
+          Collection consacrée aux œuvres liées au sacré et à la
+          spiritualité, notamment les témoignages de foi, révélations,
+          visions, rêves, méditations, enseignements, sermons,
+          commentaires de textes sacrés et biographies de figures
+          spirituelles.
+        </p>
+
+        <span class="collection-tag">
+          Sacré · Foi · Spiritualité
+        </span>
+
+      </article>
+
+
+      <!-- OSIRIS -->
+
+      <article class="collection-card collection-osiris">
+
+        <div class="collection-index">04 · COLLECTION</div>
+
+        <h3 class="collection-name">
+          Osiris
+        </h3>
+
+        <p class="collection-description">
+          Collection destinée aux bandes dessinées, aux documents
+          imagés, aux dessins et aux œuvres dans lesquelles l'image
+          occupe une place essentielle.
+        </p>
+
+        <span class="collection-tag">
+          BD · Image · Dessin
+        </span>
+
+      </article>
+
+
+      <!-- NUNYA -->
+
+      <article class="collection-card collection-nunya">
+
+        <div class="collection-index">05 · COLLECTION</div>
+
+        <h3 class="collection-name">
+          NUNYA
+        </h3>
+
+        <p class="collection-description">
+          Collection consacrée aux ouvrages de formation, aux manuels
+          scolaires et aux livres techniques, avec une identité
+          traditionnelle, africaine et ancrée dans l'univers culturel
+          togolais.
+        </p>
+
+        <span class="collection-tag">
+          Formation · École · Technique
+        </span>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     PUBLICATIONS
+======================================================= -->
+
+<section id="publications" class="section section-light">
+
+  <div class="container">
+
+    <p class="eyebrow">Publication</p>
+
+    <h2>
+      Quelques-unes de nos publications
+    </h2>
+
+    <div class="publication">
+
+
+      <!--
+        Le visuel ci-dessous est une représentation temporaire.
+        Dès qu'une vraie couverture est disponible, remplacer
+        tout le bloc .publication-cover par :
+
+        <img src="images/couverture.jpg"
+             alt="Couverture du livre">
+      -->
+
+      <div class="publication-cover">
+
+        <div class="publication-cover-inner">
+
+          <div class="publication-cover-label">
+            Collection Colibri
+          </div>
+
+          <div class="publication-cover-title">
+            Les Cicatrices<br>
+            de ma Couronne
+          </div>
+
+          <div class="publication-cover-author">
+            WANGALA Mawabèwè Salomé
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="publication-info">
+
+        <h3>
+          Les Cicatrices de ma Couronne
+        </h3>
+
+        <p class="publication-meta">
+          WANGALA Mawabèwè Salomé · Collection Colibri
+        </p>
+
+        <p class="publication-text">
+          Un livre publié aux Éditions Kor'Art dans la Collection Colibri.
+          La présentation détaillée et le résumé de l'ouvrage pourront
+          être ajoutés ici à partir du texte officiel du livre.
+        </p>
+
+        <div class="hero-actions">
+
+          <a href="#contact" class="button button-primary">
+            Nous contacter
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     PUBLIER AVEC NOUS
+======================================================= -->
+
+<section id="publier" class="section">
+
+  <div class="container">
+
+    <p class="eyebrow">Publier avec nous</p>
+
+    <h2>
+      Votre manuscrit peut devenir un livre.
+    </h2>
+
+    <p class="section-intro">
+      Kor'Art accompagne les auteurs à travers les différentes étapes
+      qui mènent à la publication.
+    </p>
+
+
+    <div class="process-grid">
+
+
+      <article class="process-card">
+
+        <div class="process-number">01</div>
+
+        <h3>
+          Présentez votre projet
+        </h3>
+
+        <p>
+          Envoyez votre manuscrit accompagné des informations nécessaires
+          à l'étude de votre projet.
+        </p>
+
+      </article>
+
+
+      <article class="process-card">
+
+        <div class="process-number">02</div>
+
+        <h3>
+          Lecture du manuscrit
+        </h3>
+
+        <p>
+          Le projet est étudié afin de déterminer son adéquation avec
+          la ligne éditoriale de la maison.
+        </p>
+
+      </article>
+
+
+      <article class="process-card">
+
+        <div class="process-number">03</div>
+
+        <h3>
+          Accord éditorial
+        </h3>
+
+        <p>
+          Lorsque le projet est retenu, les conditions de publication
+          sont présentées à l'auteur.
+        </p>
+
+      </article>
+
+
+      <article class="process-card">
+
+        <div class="process-number">04</div>
+
+        <h3>
+          Accompagnement
+        </h3>
+
+        <p>
+          L'auteur bénéficie d'un accompagnement éditorial jusqu'à
+          la préparation et la publication de son livre.
+        </p>
+
+      </article>
+
+
+    </div>
+
+
+    <div class="payment-note">
+
+      Les auteurs peuvent publier avec Kor'Art Éditions selon les
+      conditions prévues dans leur contrat. Des possibilités de paiement
+      par tranches peuvent être prévues afin de faciliter la réalisation
+      du projet éditorial.
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     APPEL AUX AUTEURS
+======================================================= -->
+
+<section class="section section-green author-section">
+
+  <div class="container author-layout">
+
+    <div class="author-copy">
+
+      <p class="eyebrow">
+        Pour les auteurs
+      </p>
+
+      <h2>
+        Une idée, un manuscrit, une histoire à partager ?
+      </h2>
+
+      <p>
+        Faites connaître votre projet à Kor'Art Éditions et découvrez
+        la collection qui correspond à votre univers.
+      </p>
+
+      <div class="hero-actions">
+
+        <a href="#contact" class="button button-primary"
+           style="background:var(--gold);">
+          Présenter mon projet
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="author-card">
+
+      <div class="author-card-title">
+        Éditions Kor'Art
+      </div>
+
+      <h3>
+        Des auteurs.<br>
+        Des histoires.<br>
+        Des idées.
+      </h3>
+
+      <p>
+        Une maison d'édition implantée à Lomé, au Togo.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     CONTACT
+======================================================= -->
+
+<section id="contact" class="section section-light">
+
+  <div class="container contact-grid">
+
+
+    <div>
+
+      <p class="eyebrow">Contact</p>
+
+      <h2>
+        Parlons de votre projet.
+      </h2>
+
+      <p class="section-intro">
+        Pour toute demande concernant une publication, une collection
+        ou un projet éditorial, contactez Kor'Art Éditions.
+      </p>
+
+
+      <div class="contact-details">
+
+
+        <div class="contact-item">
+
+          <div class="contact-label">
+            Adresse
+          </div>
+
+          <div class="contact-value">
+            Lomé, Djidjolé<br>
+            Derrière Pharmacie de Djidjolé
+          </div>
+
+        </div>
+
+
+        <div class="contact-item">
+
+          <div class="contact-label">
+            Email
+          </div>
+
+          <div class="contact-value">
+            <a href="mailto:contact.korarteditions@gmail.com">contact.korarteditions@gmail.com</a>
+          </div>
+
+        </div>
+
+
+        <div class="contact-item">
+
+          <div class="contact-label">
+            Téléphone / WhatsApp
+          </div>
+
+          <div class="contact-value">
+            <a href="tel:+22893954307">+228 93 95 43 07</a> / <a href="tel:+22899635124">+228 99 63 51 24</a>
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+    <div class="contact-form">
+
+      <form action="#" method="post">
+
+        <div class="form-row">
+
+          <div class="field">
+
+            <label for="name">
+              Nom
+            </label>
+
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Votre nom">
+
+          </div>
+
+
+          <div class="field">
+
+            <label for="email">
+              Email
+            </label>
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Votre adresse email">
+
+          </div>
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="project">
+            Votre projet
+          </label>
+
+          <select id="project" name="project">
+
+            <option value="">
+              Choisissez une collection
+            </option>
+
+            <option>
+              Collection Colibri
+            </option>
+
+            <option>
+              Collection Palme d'Or
+            </option>
+
+            <option>
+              Collection Sophia
+            </option>
+
+            <option>
+              Collection Osiris
+            </option>
+
+            <option>
+              Collection NUNYA
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="message">
+            Message
+          </label>
+
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Présentez brièvement votre projet..."></textarea>
+
+        </div>
+
+
+        <button
+          type="submit"
+          class="button button-primary">
+          Envoyer ma demande
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =======================================================
+     FOOTER
+======================================================= -->
+
+<footer>
+
+  <div class="container footer-grid">
+
+    <div>
+
+      <div class="footer-brand">
+        Kor'Art Éditions
+      </div>
+
+      <div>
+        Maison d'édition · Lomé, Togo
+      </div>
+
+    </div>
+
+
+    <div class="footer-address">
+
+      Djidjolé · derrière Pharmacie de Djidjolé<br>
+
+      © <span id="year"></span> Kor'Art Éditions
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+/* =========================================================
+   ANNÉE AUTOMATIQUE
+========================================================= */
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+
+/* =========================================================
+   MENU MOBILE
+========================================================= */
+
+const navToggle = document.getElementById("navtoggle");
+const navLinks = document.getElementById("navlinks");
+
+navToggle.addEventListener("click", function(){
+
+  navLinks.classList.toggle("open");
+
+  const isOpen = navLinks.classList.contains("open");
+
+  navToggle.setAttribute("aria-expanded", isOpen);
+
+});
+
+
+/* Fermer le menu après clic */
+
+document.querySelectorAll(".navlinks a").forEach(function(link){
+
+  link.addEventListener("click", function(){
+
+    navLinks.classList.remove("open");
+
+    navToggle.setAttribute("aria-expanded", "false");
+
+  });
+
+});
+
+</script>
+
+</body>
+</html>
