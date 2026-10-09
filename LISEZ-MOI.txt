@@ -1,0 +1,17 @@
+LES ÉDITIONS KOR’ART — PACK EXPÉRIMENTAL OPTIMISÉ, URL CLASSIQUES
+
+Contenu :
+- index.html : page principale complète, conservant les contenus et fonctionnalités.
+- assets/ : images extraites du HTML et conservées sans perte de contenu.
+- dossiers de rubriques et blog/ : petits fichiers qui redirigent immédiatement vers la route demandée.
+
+Améliorations :
+- Les pages secondaires n’effectuent plus un fetch du fichier HTML complet de 15 Mo et n’affichent plus un message de chargement pendant ce téléchargement.
+- L’URL propre demandée est restaurée dans la barre d’adresse après l’ouverture de la page principale.
+- Les images ne sont plus toutes intégrées en base64 dans le fichier HTML : elles sont conservées dans assets/ et chargées comme fichiers séparés.
+
+IMPORTANT :
+- Garder exactement la structure des dossiers et le dossier assets/.
+- Téléverser le contenu à la racine du dépôt GitHub Pages.
+- Conserver les fichiers CNAME, sitemap.xml et favicons déjà présents dans le dépôt ; ce pack ne les remplace pas.
+- Tester d’abord sur un dépôt expérimental distinct avant de remplacer le site officiel.
